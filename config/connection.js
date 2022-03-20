@@ -3,7 +3,7 @@ const state={
     db:null
 }
 module.exports.connect=(done)=>{
-    const url="mongodb://localhost:27017"
+    const url= process.env.DATABASE_URI || "mongodb://localhost:27017"
     const dbname="shop"
 
     mongoClient.connect(url,{useUnifiedTopology: true,

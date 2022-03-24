@@ -8,7 +8,7 @@ const verifyLogin = (req, res, next) => {
   if (req.session.adminloggedIn) {
     next();
   } else {
-    res.redirect("/admin");
+    res.redirect("/admin"); 
   }
 };
 /* GET users listing. */

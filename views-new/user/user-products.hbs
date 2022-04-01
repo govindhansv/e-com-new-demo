@@ -60,74 +60,16 @@
         <h1 class="heading"><span>Todays Deals</span> </h1>
 
         <div class="swiper product-slider row">
+									{{#each products}}
 
-            <a href="/" class="box">
+            <a href="/single/{{this._id}}" class="box">
                 <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
+                <h3>{{this.product}}</h3>
+                <div class="price">{{this.price}} </div>
                 <button class="btn btn-outline-warning order"><b>Order Now</b></button>
             </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            <a href="/" class="box">
-                <img src="images/product-1.png" alt="">
-                <h3>fresh orange</h3>
-                <div class="price">110 $</div>
-                <button class="btn btn-outline-warning order"><b>Order Now</b></button>
-            </a>
-            
+         									{{/each}}
+
 
         </div>
 

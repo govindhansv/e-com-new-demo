@@ -116,6 +116,7 @@ module.exports = {
             resolve(orders)
         })
     },
+    
     changeStatus:(orderId)=>{
         return new Promise((resolve,reject)=>{
             db.get().collection(collection.ORDER_COLLECTION).updateOne({_id:objectId(orderId)},

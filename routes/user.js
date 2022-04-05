@@ -21,8 +21,37 @@ const verifyLogin = (req, res, next) => {
   }
 };
 
-router.get("/fish", (req,res) => {
-  res.render("user/fish")
+router.get("/fish",async (req, res) => {
+  let users = req.session.user;
+  let total = {};
+  if (req.session.user) {
+    let prodList = await userHelpers.getCartProducts(req.session.user._id);
+    let count = await userHelpers.getCartCount(req.session.user._id);
+    if (count) {
+      total = await userHelpers.getTotalAmount(req.session.user._id);
+    }
+    console.log("ssssssssss");
+    productHelpers.getRandomProducts().then((products) => {
+      res.render("user/fish", {
+        user: true,
+        products,
+        users,
+        dropdown: true,
+        prodList,
+        count,
+        total,
+      });
+    });
+  } else {
+    productHelpers.getRandomProducts().then((products) => {
+      res.render("user/fish", {
+        user: true,
+        products,
+        users,
+        dropdown: true,
+      });
+    });
+  }
 })
 router.get("/order-new", (req,res) => {
   res.render("user/order")

@@ -205,6 +205,7 @@ module.exports = {
                 })
         })
     },
+    
     getTotalAmount: (userId) => {
         return new Promise(async (resolve, reject) => {
             let total = await db.get().collection(collection.CART_COLLECTION).aggregate([
@@ -549,3 +550,4 @@ module.exports = {
     },
 
 }
+

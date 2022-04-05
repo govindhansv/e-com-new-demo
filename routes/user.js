@@ -21,6 +21,30 @@ const verifyLogin = (req, res, next) => {
   }
 };
 
+router.get("/fish", (req,res) => {
+  res.render("user/fish")
+})
+router.get("/order-new", (req,res) => {
+  res.render("user/order")
+})
+router.get("/cart-new", (req,res) => {
+  res.render("user/cart")
+})
+router.get("/profile-new", (req,res) => {
+  res.render("user/profile")
+})
+router.get("/login-new", (req,res) => {
+  res.render("user/login")
+})
+router.get("/signup-new", (req,res) => {
+  res.render("user/signup")
+})
+router.get("/product-new", (req,res) => {
+  res.render("user/product")
+})
+
+
+
 /* GET home page. */
 router.get("/", async function (req, res, next) {
   let users = req.session.user;
